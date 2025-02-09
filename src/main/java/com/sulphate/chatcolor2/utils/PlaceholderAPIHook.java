@@ -96,14 +96,7 @@ public class PlaceholderAPIHook extends PlaceholderExpansion {
                     colour = customColoursManager.getCustomColour(colour);
                 }
 
-                // Remove any modifiers (start index = second & symbol).
-                int modifiersStartIndex = (colour.substring(1).indexOf("&"));
-
-                if (modifiersStartIndex != -1) {
-                    colour = colour.substring(0, modifiersStartIndex + 1);
-                }
-
-                return GeneralUtils.colourise(colour);
+                return colour;
             }
 
             case "color_name": {
